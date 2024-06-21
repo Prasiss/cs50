@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: time for sorted algorithim will be min for bubble sort.
+
+sort2 uses: Merge sort
+
+How do you know?: time taken is the mid  for the same set of random values using diff sorts
+
+sort3 uses: Selection Sort
+
+How do you know?: its time is highest for random num.
