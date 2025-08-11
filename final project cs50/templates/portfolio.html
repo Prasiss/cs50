@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+
+{% endblock %}
+
+{% block main %}
+    <h1 class="text-center"> My Task </h1>
+    <table class="table table-striped table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>Task</th>
+                <th>Description</th>
+                <th>Priority</th>
+                <th>Due date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%  for description in descriptions %}
+                <tr>
+                    <td>{{description["task"]}}</td>
+                    <td>{{description["task_description"]}}</td>
+
+                    <td>{{ description["priority"] }}</td>
+                    <td>{{description["due_date"]}}</td>
+                    <td>{{description["completed"]}}</td>
+
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title%}
+
+    To do Task
+
+{% endblock %}
+
+{% block main %}
+    <form action="/add_task" method="POST">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control" id="task" name="task" placeholder="Enter task" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control" id="task_description" name="task_description" placeholder="Task_description" type="text">
+
+        </div>
+        <div class="mb-3">
+
+            <select class="form-control" id="priority" name="priority">
+                <option value="">Select a Priority</option>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+
+        </div>
+        <div class="mb-3">
+            <select class="form-control" id="complete" name="complete">
+                <option value="">Completed or Not</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                <option value="Half">Half-done</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <input class="form-control" id="deadline" name="deadline" placeholder="Due Date" type="Date">
+        </div>
+
+        <button class="btn btn-primary" type="submit"> ADD Task</button>
+
+    </form>
+
+{% endblock %}
